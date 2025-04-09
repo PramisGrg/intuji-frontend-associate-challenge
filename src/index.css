@@ -3,13 +3,13 @@
 @theme {
   --color-primary: #584feb;
   --color-secondary: #6ed0a4;
-  ---color-warning: #fda14c;
+  --color-warning: #fda14c;
   --color-success: #4cd964;
   --color-danger: #ff6b6b;
   --color-info: #39a0ff;
   --color-text: #333;
   --color-text-light: #888;
-  --color-background: #1f1f23;
+  --color-background: #f7f7fb;
   --color-card-bg: #fff;
   --color-sidebar: #fff;
   --color-border: #eaeaea;
