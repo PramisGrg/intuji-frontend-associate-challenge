@@ -34,7 +34,7 @@ This project demonstrates my frontend development skills through the implementat
 
 ```bash
 # Clone the repository
-git clone [repository-url]
+git clone https://github.com/PramisGrg/intuji-frontend-associate-challenge.git
 
 # Navigate to project directory
 cd financial-dashboard
