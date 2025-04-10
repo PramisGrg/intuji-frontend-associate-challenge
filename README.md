@@ -4,7 +4,7 @@ A responsive financial dashboard interface built with React, TypeScript, and Vit
 
 ## Project Overview
 
-This project demonstrates my frontend development skills through the implementation of a financial dashboard UI. The dashboard includes multiple interactive components and responsive layouts that adapt to various screen sizes.
+This project demonstrates my frontend development skills through the implementation of a financial dashboard UI. The dashboard includes multiple interactive components and responsive layouts that adapt to different screen sizes.
 
 ![Dashboard UI Screenshot](./src//assets//images//screenshot//finance-dashboard.png)
 
@@ -55,14 +55,5 @@ npm run build
 # Preview production build
 npm run preview
 ```
-
-## Potential Enhancements
-
-- Add dark mode theme toggle
-- Implement interactive filters for the analytics chart
-- Create additional dashboard views for different financial metrics
-- Add animations for improved user experience
-
----
 
 _Submitted as part of the application for Frontend Developer role_
