@@ -5,5 +5,5 @@ export interface TAnalyticsData {
 }
 
 export interface TAnalyticsDataResponse {
-  data: TAnalyticsData[];
+  analytics: TAnalyticsData[];
 }

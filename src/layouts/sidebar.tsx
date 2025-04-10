@@ -1,7 +1,7 @@
-import { Fragment } from "react/jsx-runtime";
-import Divider from "../components/ui/divider";
-import { sidebarData } from "../constants/sidebar-data";
 import { useEffect, useRef, useState } from "react";
+import { Fragment } from "react/jsx-runtime";
+import { sidebarData } from "../constants/sidebar-data";
+import Divider from "../components/ui/divider";
 import ImagePlaceholder from "../components/ui/image-placeholder";
 interface SidebarProps {
   isOpen: boolean;

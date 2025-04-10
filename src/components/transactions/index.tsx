@@ -1,17 +1,17 @@
 import TransactionCard from "./transaction-card";
 import { transactionsData } from "../../constants/transaction-data";
+import SectionHeader from "../ui/section-header";
 
 const Transaction = () => {
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Recent Transaction</h2>
-        <a href="#" className="text-indigo-600 text-sm font-medium">
-          See All
-        </a>
-      </div>
+      <SectionHeader title="Recent Transactions" viewAllLink="#" />
 
-      <TransactionCard transactions={transactionsData} />
+      <div className="space-y-6">
+        {transactionsData.map((transaction) => (
+          <TransactionCard key={transaction.id} transaction={transaction} />
+        ))}
+      </div>
     </div>
   );
 };

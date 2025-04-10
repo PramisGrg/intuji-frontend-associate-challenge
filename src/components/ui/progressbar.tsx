@@ -4,12 +4,12 @@ interface ProgressBarProps {
 }
 
 const ProgressBar = ({ percentage, color }: ProgressBarProps) => {
-  let colorClass = "bg-indigo-600";
+  let colorClass = "bg-primary";
 
   if (color === "warning") {
-    colorClass = "bg-amber-500";
+    colorClass = "bg-warning";
   } else if (color === "success") {
-    colorClass = "bg-green-500";
+    colorClass = "bg-success";
   }
 
   return (

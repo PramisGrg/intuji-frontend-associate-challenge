@@ -3,11 +3,11 @@ import ProgressBar from "../ui/progressbar";
 
 const PlanItem = ({ plan }: TSavingPlanResponse) => {
   return (
-    <div>
-      <div className="flex justify-between pb-2">
+    <section>
+      <header className="flex justify-between pb-2">
         <h3 className="font-medium">{plan.title}</h3>
         <span className="text-xs text-gray-500">Target: {plan.targetDate}</span>
-      </div>
+      </header>
 
       <div className="flex items-baseline mb-2">
         <span className="font-bold">${plan.saved}</span>
@@ -15,7 +15,7 @@ const PlanItem = ({ plan }: TSavingPlanResponse) => {
       </div>
 
       <ProgressBar percentage={plan.percentage} color={plan.color} />
-    </div>
+    </section>
   );
 };
 

@@ -1,9 +1,9 @@
-import { AlignLeft, ChevronDown } from "lucide-react";
-import { ToogleSidebarProps } from "../types/toogle.sidebar.props";
-import search from "../assets/icons/search.svg";
+import { useState } from "react";
 import notification from "../assets/icons/notification.svg";
 import messageText from "../assets/icons/message-text.svg";
-import { useState } from "react";
+import search from "../assets/icons/search.svg";
+import { AlignLeft, ChevronDown } from "lucide-react";
+import { ToogleSidebarProps } from "../types/toogle.sidebar.props";
 
 const TopBar = ({ toggleSidebar }: ToogleSidebarProps) => {
   const [rotated, setRotated] = useState(false);
@@ -18,7 +18,7 @@ const TopBar = ({ toggleSidebar }: ToogleSidebarProps) => {
         <section className="lg:col-span-2 flex">
           <button
             aria-label="Toggle Sidebar"
-            className="mr-4 text-neutral-800 md:hidden"
+            className="mr-4 text-neutral-800 md:hidden cursor-pointer"
             onClick={toggleSidebar}
           >
             <AlignLeft />

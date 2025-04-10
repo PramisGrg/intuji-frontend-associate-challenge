@@ -1,9 +1,9 @@
+import TopBar from "./topbar";
 import Analytics from "../components/analytics";
 import Cards from "../components/cards";
 import SavingPlan from "../components/saving-plan";
 import Transaction from "../components/transactions";
 import { ToogleSidebarProps } from "../types/toogle.sidebar.props";
-import TopBar from "./topbar";
 
 export default function MainContent({ toggleSidebar }: ToogleSidebarProps) {
   return (

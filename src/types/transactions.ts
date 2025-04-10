@@ -8,5 +8,5 @@ export interface TTransactionData {
 }
 
 export interface TTransactionCardResponse {
-  transactions: TTransactionData[];
+  transaction: TTransactionData;
 }

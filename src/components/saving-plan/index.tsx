@@ -4,7 +4,7 @@ import { savingPlans } from "../../constants/saving-plans";
 
 const SavingPlan = () => {
   return (
-    <section>
+    <div>
       <SectionHeader title="Saving Plan" viewAllLink="#" />
 
       <div className="space-y-6">
@@ -12,7 +12,7 @@ const SavingPlan = () => {
           <PlanItem key={plan.id} plan={plan} />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
