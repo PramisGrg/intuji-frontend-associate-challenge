@@ -3,12 +3,19 @@ import { ToogleSidebarProps } from "../types/toogle.sidebar.props";
 import search from "../assets/icons/search.svg";
 import notification from "../assets/icons/notification.svg";
 import messageText from "../assets/icons/message-text.svg";
+import { useState } from "react";
 
 const TopBar = ({ toggleSidebar }: ToogleSidebarProps) => {
+  const [rotated, setRotated] = useState(false);
+
+  const handleChevronClick = () => {
+    setRotated((prev) => !prev);
+  };
+
   return (
     <header className="p-4">
-      <nav className="grid md:grid-cols-3 gap-4">
-        <section className="md:col-span-2 flex">
+      <nav className="grid lg:grid-cols-3 gap-4">
+        <section className="lg:col-span-2 flex">
           <button
             aria-label="Toggle Sidebar"
             className="mr-4 text-neutral-800 md:hidden"
@@ -57,10 +64,13 @@ const TopBar = ({ toggleSidebar }: ToogleSidebarProps) => {
                 />
               </svg>
             </figure>
-            <figcaption className="text-sm text-gray-800 font-medium">
-              Mirie Kiritani
-            </figcaption>
-            <ChevronDown />
+            <figcaption className="font-semibold">Mirie Kiritani</figcaption>
+            <ChevronDown
+              onClick={handleChevronClick}
+              className={`transform transition-transform duration-300 ${
+                rotated ? "rotate-180" : null
+              }`}
+            />
           </div>
         </section>
       </nav>

@@ -18,9 +18,9 @@ function App() {
     <div className="flex h-screen bg-background relative">
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
 
-      <div className="flex-1 overflow-auto w-full md:ml-64">
+      <main className="flex-1 overflow-auto w-full md:ml-64">
         <MainContent toggleSidebar={toggleSidebar} />
-      </div>
+      </main>
     </div>
   );
 }
