@@ -4,7 +4,7 @@ import expenseImg from "../../assets/images/cards/direct-up.svg";
 
 const ExpenseCard = () => {
   return (
-    <section className="border border-border rounded-lg p-4 space-y-6">
+    <section className="group cursor-pointer border border-border rounded-lg p-4 space-y-6">
       <header className="flex items-center gap-4">
         <div className="border border-border rounded-full">
           <img src={expenseImg} className="p-2" />
@@ -22,7 +22,7 @@ const ExpenseCard = () => {
 
       <footer className="flex justify-between items-center pt-4">
         <span className="text-2xl font-bold">$200.31</span>
-        <ArrowRight className="h-5 w-5 transition-transform duration-300 ease-in-out cursor-pointer hover:scale-125 hover:rotate-45" />
+        <ArrowRight className="h-5 w-5 cursor-pointer transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:scale-125" />
       </footer>
     </section>
   );

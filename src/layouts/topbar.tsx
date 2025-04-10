@@ -23,12 +23,12 @@ const TopBar = ({ toggleSidebar }: ToogleSidebarProps) => {
           >
             <AlignLeft />
           </button>
-          <div className="flex items-center bg-white gap-2 rounded-full w-full px-4 py-3">
+          <div className="flex items-center bg-white gap-2 rounded-full w-full px-4 py-3 focus-within:ring-2 focus-within:ring-primary">
             <img src={search} alt="Search Icon" className="w-4 h-4" />
             <input
               type="text"
               placeholder="Search here..."
-              className="w-full bg-transparent text-gray-600"
+              className="w-full bg-transparent text-gray-600 focus:outline-none"
               aria-label="Search"
             />
           </div>

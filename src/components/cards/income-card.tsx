@@ -4,7 +4,7 @@ import incomeImg from "../../assets/images/cards/direct-down.svg";
 
 const IncomeCard = () => {
   return (
-    <section className="border border-border rounded-lg p-4 space-y-6">
+    <section className="group border border-border cursor-pointer rounded-lg p-4 space-y-6">
       <header className="flex items-center gap-4">
         <div className="border border-border rounded-full">
           <img src={incomeImg} className="p-2" />
@@ -22,7 +22,7 @@ const IncomeCard = () => {
 
       <footer className="flex justify-between items-center pt-4">
         <span className="text-2xl font-bold">$21,121.0</span>
-        <ArrowRight className="h-5 w-5 transition-transform duration-300 ease-in-out cursor-pointer hover:scale-125 hover:rotate-45" />
+        <ArrowRight className="h-5 w-5 cursor-pointer transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:scale-125" />
       </footer>
     </section>
   );

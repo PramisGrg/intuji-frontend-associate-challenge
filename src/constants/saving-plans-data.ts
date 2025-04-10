@@ -1,4 +1,6 @@
-export const savingPlans = [
+import { TSavingPlan } from "../types/saving.plan";
+
+export const savingPlans: TSavingPlan[] = [
   {
     id: 1,
     title: "Bali Vacation",

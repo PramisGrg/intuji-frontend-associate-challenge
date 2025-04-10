@@ -1,6 +1,6 @@
 import SectionHeader from "../ui/section-header";
 import PlanItem from "./saving-plan";
-import { savingPlans } from "../../constants/saving-plans";
+import { savingPlans } from "../../constants/saving-plans-data";
 
 const SavingPlan = () => {
   return (

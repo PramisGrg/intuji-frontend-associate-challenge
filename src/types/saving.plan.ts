@@ -5,7 +5,7 @@ export interface TSavingPlan {
   saved: number;
   goal: number;
   percentage: number;
-  color: string;
+  color: "success" | "warning" | "primary";
 }
 
 export interface TSavingPlanResponse {
