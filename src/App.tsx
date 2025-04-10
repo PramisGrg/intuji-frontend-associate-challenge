@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen bg-background">
+    <div className="flex flex-col md:flex-row h-screen bg-background">
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
       <MainContent toggleSidebar={toggleSidebar} />
     </div>

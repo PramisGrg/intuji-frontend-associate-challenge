@@ -3,7 +3,6 @@ import Divider from "../components/ui/divider";
 import { sidebarData } from "../constants/sidebar-data";
 import { useEffect, useRef, useState } from "react";
 import ImagePlaceholder from "../components/ui/image-placeholder";
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -45,9 +44,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                        : "-translate-x-full lg:translate-x-0 opacity-0 lg:opacity-100"
                    }`}
     >
-      <div className="p-4">
-        <ImagePlaceholder rounded="md" />
-      </div>
+      <ImagePlaceholder rounded="md" />
 
       <nav>
         <ul className="py-2">
@@ -58,8 +55,8 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                 className={`px-4 py-4 transition-all duration-200 ease-in-out 
                              ${
                                selectedItem === item.id
-                                 ? "border-l-4 border-primary bg-blue-50"
-                                 : "border-l-4 border-transparent hover:bg-gray-100"
+                                 ? "border-l-4 border-primary"
+                                 : "border-l-4 border-transparent hover:bg-blue-50"
                              }`}
               >
                 <a href="#" className="flex space-x-2 items-center">
