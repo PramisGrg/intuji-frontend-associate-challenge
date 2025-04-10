@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# Financial Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive financial dashboard interface built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates my frontend development skills through the implementation of a financial dashboard UI. The dashboard includes multiple interactive components and responsive layouts that adapt to various screen sizes.
 
-## Expanding the ESLint configuration
+![Dashboard UI Screenshot](./src//assets//images//screenshot//finance-dashboard.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Responsive Layout**: Fully adaptable interface that works on mobile, tablet, and desktop devices
+- **Overview Section**: Displays financial metrics including balance, savings, expenses, and income
+- **Saving Plans Tracker**: Visual progress indicators for different financial goals
+- **Analytics Chart**: Interactive area chart showing financial trends over time
+- **Recent Transactions**: List of latest financial activities with status indicators
+
+## Technical Implementation
+
+- **React & TypeScript**: Built with functional components and strong typing
+- **CSS Grid & Flexbox**: Used for responsive layout management
+- **Recharts**: Implemented for data visualization
+- **Component-Based Architecture**: Modular design for maintainable code
+
+## Design Choices
+
+- Used a grid-based layout system to ensure proper section height alignment
+- Implemented card components with consistent styling across the interface
+- Created responsive breakpoints to optimize the user experience across devices
+- Added visual indicators (colors, progress bars) to enhance data comprehension
+
+## Installation and Setup
+
+```bash
+# Clone the repository
+git clone [repository-url]
+
+# Navigate to project directory
+cd financial-dashboard
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Build Process
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Create production build
+npm run build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# Preview production build
+npm run preview
 ```
+
+## Potential Enhancements
+
+- Add dark mode theme toggle
+- Implement interactive filters for the analytics chart
+- Create additional dashboard views for different financial metrics
+- Add animations for improved user experience
+
+---
+
+_Submitted as part of the application for Frontend Developer role_
