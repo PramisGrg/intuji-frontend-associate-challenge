@@ -1,73 +1,54 @@
-import { useEffect, useRef } from "react";
-import Chart, { Chart as ChartJS } from "chart.js/auto";
-import { analyticsData } from "../../constants/analytics-data";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import { TAnalyticsDataResponse } from "../../types/analytics";
 
-const AnalyticsChart = () => {
-  const chartRef = useRef<HTMLCanvasElement | null>(null);
-  const chartInstance = useRef<ChartJS | null>(null);
-
-  useEffect(() => {
-    if (!chartRef.current) return; // ✅ Null check for TypeScript
-    const ctx = chartRef.current.getContext("2d");
-    if (!ctx) return;
-
-    if (chartInstance.current) {
-      chartInstance.current.destroy();
-    }
-
-    chartInstance.current = new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-        datasets: [
-          {
-            label: "Primary",
-            data: analyticsData.primary,
-            borderColor: "#6366f1",
-            backgroundColor: "rgba(99, 102, 241, 0.1)",
-            tension: 0.4,
-          },
-          {
-            label: "Secondary",
-            data: analyticsData.secondary,
-            borderColor: "#fbbf24",
-            backgroundColor: "rgba(251, 191, 36, 0.1)",
-            tension: 0.4,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              callback: function (value) {
-                if (value >= 1000) {
-                  return value / 1000 + "k";
-                }
-                return value;
-              },
-            },
-          },
-        },
-        plugins: {
-          legend: {
-            display: false,
-          },
-        },
-      },
-    });
-
-    return () => {
-      if (chartInstance.current) {
-        chartInstance.current.destroy();
-      }
-    };
-  }, []);
-
-  return <canvas ref={chartRef}></canvas>;
+const AnalyticsCard = ({ data }: TAnalyticsDataResponse) => {
+  return (
+    <div className="h-64">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          data={data}
+          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+        >
+          <defs>
+            <linearGradient id="colorValue1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#6366F1" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#6366F1" stopOpacity={0.1} />
+            </linearGradient>
+            <linearGradient id="colorValue2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#F59E0B" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#F59E0B" stopOpacity={0.1} />
+            </linearGradient>
+          </defs>
+          <XAxis dataKey="name" tickMargin={10} />
+          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <Tooltip />
+          <Area
+            type="monotone"
+            dataKey="value1"
+            stroke="#6366F1"
+            fillOpacity={1}
+            fill="url(#colorValue1)"
+          />
+          <Area
+            type="monotone"
+            dataKey="value2"
+            stroke="#F59E0B"
+            fillOpacity={1}
+            fill="url(#colorValue2)"
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
 };
 
-export default AnalyticsChart;
+export default AnalyticsCard;

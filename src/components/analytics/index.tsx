@@ -1,40 +1,31 @@
-import AnalyticsChart from "./analytics-card";
+import { ChevronDown } from "lucide-react";
+import AnalyticsCard from "./analytics-card";
+import { analyticsData } from "../../constants/analytics-data";
 
 const Analytics = () => {
   return (
-    <section
-      aria-labelledby="analytics-title"
-      className="bg-white rounded-lg p-4 border border-gray-200"
-    >
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
-        <h2 id="analytics-title" className="text-xl font-bold">
-          Analytics
-        </h2>
+    <div>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+        <h2 className="text-2xl font-bold">Analytics</h2>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-primary rounded-full mr-2"></div>
+            <span className="text-sm text-neutral-500">Label 1</span>
+          </div>
+          <div className="flex items-center">
+            <div className="w-3 h-3 bg-yellow-400 rounded-full mr-2"></div>
+            <span className="text-sm text-neutral-500">Label 1</span>
+          </div>
 
-        <div className="flex items-center mt-2 sm:mt-0">
-          <div className="flex items-center mr-4">
-            <span className="w-3 h-3 rounded-full bg-indigo-500 mr-2"></span>
-            <span className="text-sm text-gray-600">Label 1</span>
-          </div>
-          <div className="flex items-center mr-4">
-            <span className="w-3 h-3 rounded-full bg-amber-400 mr-2"></span>
-            <span className="text-sm text-gray-600">Label 1</span>
-          </div>
-          <div className="relative">
-            <select className="bg-gray-100 text-sm py-1 px-3 rounded-md appearance-none pr-8 focus:outline-none">
-              <option>Weekly</option>
-              <option>Monthly</option>
-              <option>Yearly</option>
-            </select>
-            <i className="fas fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-xs text-gray-500"></i>
-          </div>
+          <button className="flex items-center bg-white border border-gray-200 rounded-lg px-4 py-2 text-sm">
+            <span>Weekly</span>
+            <ChevronDown className="ml-2 h-4 w-4" />
+          </button>
         </div>
       </div>
 
-      <div className="h-64">
-        <AnalyticsChart />
-      </div>
-    </section>
+      <AnalyticsCard data={analyticsData} />
+    </div>
   );
 };
 
