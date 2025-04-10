@@ -21,8 +21,8 @@ const IncomeCard = () => {
       <Divider />
 
       <footer className="flex justify-between items-center pt-4">
-        <span className="text-2xl font-bold"> $21,121.0</span>
-        <ArrowRight className="h-5 w-5" />
+        <span className="text-2xl font-bold">$21,121.0</span>
+        <ArrowRight className="h-5 w-5 transition-transform duration-300 ease-in-out cursor-pointer hover:scale-125 hover:rotate-45" />
       </footer>
     </section>
   );

@@ -21,8 +21,8 @@ const SavingCard = () => {
       <Divider />
 
       <footer className="flex justify-between items-center pt-4">
-        <span className="text-2xl font-bold"> $1,050.44</span>
-        <ArrowRight className="h-5 w-5" />
+        <span className="text-2xl font-bold">$1,050.44</span>
+        <ArrowRight className="h-5 w-5 transition-transform duration-300 ease-in-out cursor-pointer hover:scale-125 hover:rotate-45" />
       </footer>
     </section>
   );
