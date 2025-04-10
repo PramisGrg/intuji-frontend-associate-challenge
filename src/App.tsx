@@ -1,7 +1,7 @@
 import { useState } from "react";
-import MainContent from "./layouts/main-content";
+
 import Sidebar from "./layouts/sidebar";
-import FinancialDashboard from "./layouts/main-content";
+import MainContent from "./layouts/main-content";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,10 +15,12 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-background">
+    <div className="flex h-screen bg-background relative">
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-      {/* <MainContent toggleSidebar={toggleSidebar} /> */}
-      <FinancialDashboard toggleSidebar={toggleSidebar} />
+
+      <div className="flex-1 overflow-auto w-full md:ml-64">
+        <MainContent toggleSidebar={toggleSidebar} />
+      </div>
     </div>
   );
 }

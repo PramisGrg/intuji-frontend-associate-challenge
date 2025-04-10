@@ -8,7 +8,7 @@ const TransactionCard = ({ transactions }: TTransactionCardResponse) => {
           <div className="flex items-center">
             <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
               <img
-                src="/api/placeholder/40/40"
+                src={transaction.icon}
                 alt={transaction.name}
                 className="w-full h-full rounded-full"
               />

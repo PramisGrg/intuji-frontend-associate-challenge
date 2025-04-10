@@ -8,9 +8,7 @@ import Transaction from "../components/transactions";
 import { ToogleSidebarProps } from "../types/toogle.sidebar.props";
 import TopBar from "./topbar";
 
-export default function FinancialDashboard({
-  toggleSidebar,
-}: ToogleSidebarProps) {
+export default function MainContent({ toggleSidebar }: ToogleSidebarProps) {
   return (
     <div className="flex flex-col w-full">
       <TopBar toggleSidebar={toggleSidebar} />

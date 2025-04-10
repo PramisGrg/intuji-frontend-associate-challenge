@@ -4,6 +4,7 @@ export interface TTransactionData {
   date: string;
   amount: number;
   status: string;
+  icon: string;
 }
 
 export interface TTransactionCardResponse {
